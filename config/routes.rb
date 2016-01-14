@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   #
-    root 'application#hello'
+    root 'blogposts#index'
+    get 'hello' => 'application#hello'
 end
