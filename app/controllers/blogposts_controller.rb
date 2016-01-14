@@ -1,5 +1,5 @@
 class BlogpostsController < ApplicationController
-  before_action :set_blogpost, only: [:show, :edit, :update, :destroy]
+  before_action :set_blogpost, only: [:show, :edit, :comment, :update, :destroy]
 
   # GET /blogposts
   # GET /blogposts.json
@@ -10,6 +10,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1
   # GET /blogposts/1.json
   def show
+    @bpcomments = @blogpost.comments
   end
 
   # GET /blogposts/new
@@ -19,6 +20,9 @@ class BlogpostsController < ApplicationController
 
   # GET /blogposts/1/edit
   def edit
+  end
+
+  def comment
   end
 
   # POST /blogposts
